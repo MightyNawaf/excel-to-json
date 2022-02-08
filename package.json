@@ -13,7 +13,7 @@
   "version": "1.0.0",
   "main": "server-upload.js",
   "scripts": {
-    "start": "nodemon server-upload.js"
+    "start": "node server-upload.js"
   },
   "keywords": [],
   "author": "",
