@@ -2,7 +2,7 @@ const express = require("express");
 const multer = require("multer");
 const fs = require('fs');
 const app = express();
-
+const port = process.env.PORT || 3000;
 // Store the file in uploads folder
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage});
 app.use(express.static('public'));
-app.listen(3000, () => console.log('App is listening...'));
+app.listen(port, () => console.log('App is listening...'));
 
 app.post("/upload", upload.single("excel"), function (req, res) {
     return res.redirect("http://localhost:3000/");
