@@ -1,1 +1,1 @@
-web: node server-uplaod.js
+web: node server-upload.js
